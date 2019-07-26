@@ -62,9 +62,10 @@
   jQuery('#message-form').on('submit',function(e){
     e.preventDefault();
     var messageTextBox = jQuery('[name=message]');
+    var user = window.location.href;
 
     socket.emit('createMessage',{
-      from:'User',
+      from: localStorage.getItem('User'),
       text:messageTextBox.val()
     },function(){
       messageTextBox.val('');

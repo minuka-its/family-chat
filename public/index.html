@@ -8,13 +8,13 @@
   </head>
   <body class="centered-form">
     <div class="centered-form__form">
-      <form action="/chat.html">
+      <form id="login-form" action="/chat.html">
         <div class="form-field">
           <h3>Join a Chat</h3>
         </div>
         <div class="form-field">
           <label>Display Name</label>
-          <input type="text" name="name" autofocus/>
+          <input type="text" name="name" id="name" autofocus/>
         </div>
         <div class="form-field">
           <label>Room Name</label>
@@ -25,6 +25,10 @@
         </div>
       </form>
     </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/libs/jquery-3.3.1.min.js"></script>
+    <script src = "/js/login.js"></script>
   </body>
 
   </html>
